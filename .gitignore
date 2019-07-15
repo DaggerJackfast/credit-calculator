@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+npm-debug.log
+dist
+public/bundle.*
+.vs_code
+.idea
+data
+package-lock.json
