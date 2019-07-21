@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/credit-calculator
+    docker:
+      - image: circleci/node:8.10
+    steps:
+      - checkout
+      - run:
+          name: Installing project dependencies
+          command: npm install
+      - run:
+          name: Run js unit tests
+          command: |
+            npm test
