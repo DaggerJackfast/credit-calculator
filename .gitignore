@@ -4,6 +4,7 @@ npm-debug.log
 dist
 public/bundle.*
 .vs_code
+.vscode
 .idea
 data
 package-lock.json
