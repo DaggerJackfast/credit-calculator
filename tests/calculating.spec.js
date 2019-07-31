@@ -21,10 +21,10 @@ describe('AnnuityCalculator', function () {
     it('should return pays for full period', function () {
         const amount = 100000;
         const percent = 10;
-        const monthCount = 6;
-        const startDate = new Date('2014-12-24');
+        const monthsCount = 6;
+        const startDate = '2014-12-24';
         const calucaltor = new AnnuityCalculator();
-        const payments = calucaltor.calculate(amount, percent, monthCount, startDate);
+        const payments = calucaltor.calculate(amount, percent, monthsCount, startDate);
         const expected = readJsonFixture('annuityPayments.json');
         assert.deepEqual(payments, expected);
     })
@@ -34,7 +34,7 @@ describe('DifferentialCalculator', function () {
         const amount = 300000;
         const percent = 20;
         const monthsCount = 6;
-        const startDate = new Date('2015-06-04');
+        const startDate = '2015-06-04';
         const calucaltor = new DifferentialCalculator();
         const payments = calucaltor.calculate(amount, percent, monthsCount, startDate);
         const expected = readJsonFixture('differentialPayments.json');
