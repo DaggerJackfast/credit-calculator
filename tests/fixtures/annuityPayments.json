@@ -1,44 +1,47 @@
-[
-    {
-        "monthlyPayment": 17156.14,
-        "loanBalance": 100000,
-        "percents": 833.33,
-        "mainDebt": 16322.81,
-        "date": "2015-01-24"
-    },
-    {
-        "monthlyPayment": 17156.14,
-        "loanBalance": 83677.19,
-        "percents": 697.31,
-        "mainDebt": 16458.83,
-        "date": "2015-02-24"
-    },
-    {
-        "monthlyPayment": 17156.14,
-        "loanBalance": 67218.36,
-        "percents": 560.15,
-        "mainDebt": 16595.99,
-        "date": "2015-03-24"
-    },
-    {
-        "monthlyPayment": 17156.14,
-        "loanBalance": 50622.38,
-        "percents": 421.85,
-        "mainDebt": 16734.29,
-        "date": "2015-04-24"
-    },
-    {
-        "monthlyPayment": 17156.14,
-        "loanBalance": 33888.09,
-        "percents": 282.40,
-        "mainDebt": 16873.74,
-        "date": "2015-05-24"
-    },
-    {
-        "monthlyPayment": 17156.14,
-        "loanBalance": 17014.35,
-        "percents": 141.79,
-        "mainDebt": 17014.35,
-        "date": "2015-06-24"
-    }
-]
+{
+    "payments": [{
+            "monthlyPayment": 17156.14,
+            "loanBalance": 100000,
+            "percents": 833.33,
+            "mainDebt": 16322.81,
+            "date": "2015-01-24"
+        },
+        {
+            "monthlyPayment": 17156.14,
+            "loanBalance": 83677.19,
+            "percents": 697.31,
+            "mainDebt": 16458.83,
+            "date": "2015-02-24"
+        },
+        {
+            "monthlyPayment": 17156.14,
+            "loanBalance": 67218.36,
+            "percents": 560.15,
+            "mainDebt": 16595.99,
+            "date": "2015-03-24"
+        },
+        {
+            "monthlyPayment": 17156.14,
+            "loanBalance": 50622.38,
+            "percents": 421.85,
+            "mainDebt": 16734.29,
+            "date": "2015-04-24"
+        },
+        {
+            "monthlyPayment": 17156.14,
+            "loanBalance": 33888.09,
+            "percents": 282.40,
+            "mainDebt": 16873.74,
+            "date": "2015-05-24"
+        },
+        {
+            "monthlyPayment": 17156.14,
+            "loanBalance": 17014.35,
+            "percents": 141.79,
+            "mainDebt": 17014.35,
+            "date": "2015-06-24"
+        }
+    ],
+    "totalPayment": 102936.84,
+    "totalPercents": 2936.84
+}

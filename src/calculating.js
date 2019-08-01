@@ -64,7 +64,13 @@ export class AnnuityCalculator extends Calculator {
                 date,
             });
         }
-        return payments;
+        const totalPayment = monthlyPayment * monthsCount;
+        const totalPercents = totalPayment - amount;
+        return {
+            payments,
+            totalPayment: this.numberRound(totalPayment, 2),
+            totalPercents: this.numberRound(totalPercents, 2)
+        }
     }
 }
 
@@ -76,6 +82,7 @@ export class DifferentialCalculator extends Calculator {
         const payments = [];
         const mainDebt = amount / monthsCount;
         const percentDecimal = percent / 100;
+        let totalPayment = 0
         for (const index of Array(monthsCount).keys()) {
             const addedMonths = index + 1;
             const date = this.addMonths(startDate, addedMonths);
@@ -84,6 +91,7 @@ export class DifferentialCalculator extends Calculator {
             const loanBalance = amount - mainDebt * index;
             const percents = loanBalance * percentDecimal * monthsDaysCount / yearsDaysCount;
             const monthlyPayment = mainDebt + percents;
+            totalPayment += this.numberRound(monthlyPayment, 2);
             payments.push({
                 monthlyPayment: this.numberRound(monthlyPayment, 2),
                 loanBalance: this.numberRound(loanBalance, 2),
@@ -92,7 +100,12 @@ export class DifferentialCalculator extends Calculator {
                 date,
             })
         }
-        return payments;
+        const totalPercents = totalPayment - amount;
+        return {
+            payments,
+            totalPayment: this.numberRound(totalPayment, 2),
+            totalPercents: this.numberRound(totalPercents, 2)
+        };
     }
-    
+
 }

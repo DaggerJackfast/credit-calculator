@@ -1,44 +1,47 @@
-[
-    {
-        "monthlyPayment": 55095.89,
-        "loanBalance": 300000,
-        "percents": 5095.89,
-        "mainDebt": 50000,
-        "date": "2015-07-04"
-    },
-    {
-        "monthlyPayment": 54246.58,
-        "loanBalance": 250000,
-        "percents": 4246.58,
-        "mainDebt": 50000,
-        "date": "2015-08-04"
-    },
-    {
-        "monthlyPayment": 53287.67,
-        "loanBalance": 200000,
-        "percents": 3287.67,
-        "mainDebt": 50000,
-        "date": "2015-09-04"
-    },
-    {
-        "monthlyPayment": 52547.95,
-        "loanBalance": 150000,
-        "percents": 2547.95,
-        "mainDebt": 50000,
-        "date": "2015-10-04"
-    },
-    {
-        "monthlyPayment": 51643.84,
-        "loanBalance": 100000,
-        "percents": 1643.84,
-        "mainDebt": 50000,
-        "date": "2015-11-04"
-    },
-    {
-        "monthlyPayment": 50849.32,
-        "loanBalance": 50000,
-        "percents": 849.32,
-        "mainDebt": 50000,
-        "date": "2015-12-04"
-    }
-]
+{
+    "payments": [{
+            "monthlyPayment": 55095.89,
+            "loanBalance": 300000,
+            "percents": 5095.89,
+            "mainDebt": 50000,
+            "date": "2015-07-04"
+        },
+        {
+            "monthlyPayment": 54246.58,
+            "loanBalance": 250000,
+            "percents": 4246.58,
+            "mainDebt": 50000,
+            "date": "2015-08-04"
+        },
+        {
+            "monthlyPayment": 53287.67,
+            "loanBalance": 200000,
+            "percents": 3287.67,
+            "mainDebt": 50000,
+            "date": "2015-09-04"
+        },
+        {
+            "monthlyPayment": 52547.95,
+            "loanBalance": 150000,
+            "percents": 2547.95,
+            "mainDebt": 50000,
+            "date": "2015-10-04"
+        },
+        {
+            "monthlyPayment": 51643.84,
+            "loanBalance": 100000,
+            "percents": 1643.84,
+            "mainDebt": 50000,
+            "date": "2015-11-04"
+        },
+        {
+            "monthlyPayment": 50849.32,
+            "loanBalance": 50000,
+            "percents": 849.32,
+            "mainDebt": 50000,
+            "date": "2015-12-04"
+        }
+    ],
+    "totalPayment": 317671.25,
+    "totalPercents": 17671.25
+}

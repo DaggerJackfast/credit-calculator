@@ -5,16 +5,19 @@
   let percent = 10;
   let monthsCount = 6;
   let startDate = "2015-01-04";
-  let payments = [];
+  let result = {
+    payments: 0
+  }
+
   const annuity = new AnnuityCalculator();
   function calcucatePayments(){
     return annuity.calculate(amount, percent, monthsCount, startDate);
   }
   onMount(() => {
-    payments = calcucatePayments();
+    result = calcucatePayments();
   });
   function handleSubmit() {
-    payments = calcucatePayments();
+    result = calcucatePayments();
   }
 </script>
 
@@ -57,7 +60,7 @@
     -webkit-appearance: none;
     margin: 0;
   }
-  .results {
+  .result {
     display: block;
     width: 75%;
   }
@@ -70,6 +73,9 @@
   }
   .payment-headers{
     font-weight: bold;
+  }
+  .payment-total{
+    font-weight: 500;    
   }
   .payment-cell {
     width: 15%;
@@ -132,8 +138,8 @@
       </div>
 
     </form>
-    <div class="results">
-      {#if payments.length > 0}
+    <div class="result">
+      {#if result.payments.length > 0}
       <h3>Payments:</h3>
         <div class="payment payment-headers">
           <span class="payment-cell min-cell">#</span>
@@ -143,7 +149,7 @@
           <span class="payment-cell">balance</span>
           <span class="payment-cell">date</span>
         </div>
-        {#each payments as { monthlyPayment, loanBalance, percents, mainDebt, date }, index}
+        {#each result.payments as { monthlyPayment, loanBalance, percents, mainDebt, date }, index}
           <div class="payment">
             <span class="payment-cell min-cell">{index + 1}</span>
             <span class="payment-cell">{monthlyPayment}</span>
@@ -153,6 +159,11 @@
             <span class="payment-cell">{date}</span>
           </div>
         {/each}
+        <div class="payment payment-total">
+          <span class="payment-cell min-cell">Σ</span>
+          <span class="payment-cell">{result.totalPayment}</span>
+          <span class="payment-cell">{result.totalPercents}</span>
+        </div>
       {/if}
     </div>
   </div>
