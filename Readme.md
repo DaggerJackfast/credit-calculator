@@ -1,6 +1,6 @@
 Credit-caclulator
 
-This application can be used to calculate monthly loan payments. The application supports two types of payment calculation is annuity and differentiated calculations.
+This application can be used to calculate monthly loan payments. The application supports two types of payment calculation are annuity and differentiated calculations.
 
 Setup project:
 ```bash
